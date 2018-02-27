@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Roboto:300,400,700');
+@import 'normalize.css';
+
+body{
+    background-color: #f1f3f5;
+}
+
+#menubar{
+    background-color: #fff;
+    box-shadow: 0 0 8px -4px #111;
+    box-sizing: border-box;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    display: flex;
+    width: 100%;
+    height: 60px;
+}
+
+#menubar *{
+    padding: 0;
+    margin: 0;
+}
+
+#menubar .logo span{cursor: default;}
+
+#menubar .list ul span,
+#menubar .log-in-out span
+{cursor: pointer;}
+
+#menubar > .logo {
+    text-transform: capitalize;
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+}
+
+#menubar > .list{
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+#menubar > .pages{
+    flex-grow: 1;
+}
+
+#menubar ul{
+    list-style-type: none;
+    display: flex;
+}
+
+#menubar .pages ul{
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 0 30px;
+    width: 250px;
+}
+
+#menubar .social_Media ul{
+    justify-content: space-around;
+    font-size: 20px;
+    margin-top: 18px;
+    width: 120px;
+}
+
+#menubar .log-in-out {
+    font-size: 20px;
+    margin-top: 18px;
+    width: 30px;
+    padding: 0 auto;
+}
+
+#menubar .log-in-out span{
+    margin: 0 5px;
+}
+
+#menubar .menu_btn{
+    display: none;
+}
+
+@media screen and (max-width: 750px){
+
+    #menubar >*:not(.list){
+        justify-content: center;
+        box-sizing: border-box;
+        font-size: 30px;
+        flex-basis: 33%;
+        padding: 10px 0;
+        display: flex;
+    }
+    #menubar .log-in-out{
+        justify-content: flex-end;
+        margin: 0;
+    }
+
+    #menubar .menu_btn{
+        justify-content: flex-start;
+        display: inherit;
+        order: -1;
+    }
+
+    #menubar .menu_btn span{
+        cursor: pointer;
+    }
+    #menubar .list{
+        order: 1;
+        min-width: 100%;
+    }
+
+    #menubar .list > ul{
+        flex-direction: column;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+    }
+
+    #menubar .list > ul li{
+        flex-grow: 1;
+        padding: 10px 0;
+        border-top: solid 1px #eee;
+    }
+    
+    #menubar .list > ul li span{
+        padding-left: 10px;
+    }
+
+    #menubar .pages > ul li{
+        padding: 12px 0;
+    }
+}
+
+@media screen and (max-width: 540px){
+
+    #menubar .log-in-out{
+        border-top: solid 1px #eee;
+        justify-content: flex-start;
+        font-size: 20px;
+        padding: 12px 0;
+        flex-grow: 1;
+        order: 1;
+    }
+
+    #menubar .logo,
+    #menubar .menu_btn{
+        flex-basis: 50%;
+    }
+
+    #menubar .menu_btn{
+        justify-content: flex-end;
+        display: inherit;
+    }
+
+    #menubar .logo{
+        order: -1;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #menubar .logo,
+    #menubar .menu_btn{
+        font-size: 24px;
+    }
+
+    #menubar .pages ul{
+        font-size: 14px;
+    }
+
+    #menubar .social_Media ul,
+    #menubar .log-in-out{
+        font-size: 16px;
+    }
+}
